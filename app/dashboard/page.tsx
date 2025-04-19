@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
+import { useState } from "react";
+import Link from "next/link";
 import {
   BarChart3,
   Bell,
@@ -17,12 +17,18 @@ import {
   User,
   Users,
   X,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,10 +36,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import { Sheet, SheetContent } from "@/components/ui/sheet"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Sidebar,
   SidebarContent,
@@ -47,17 +53,20 @@ import {
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
 export default function DashboardPage() {
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   return (
     <SidebarProvider>
       <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr] bg-[#f0f8fb]">
         <Sidebar className="hidden lg:block bg-white">
           <SidebarHeader className="flex h-14 items-center border-b px-6">
-            <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
+            <Link
+              href="/dashboard"
+              className="flex items-center gap-2 font-semibold"
+            >
               <span className="text-[#26a570]">Portaal</span>
               <span>voor</span>
               <span className="text-[#ff8a47]">Mij</span>
@@ -81,7 +90,10 @@ export default function DashboardPage() {
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton asChild className="hover:bg-[#e6f5f0] hover:text-[#26a570]">
+                    <SidebarMenuButton
+                      asChild
+                      className="hover:bg-[#e6f5f0] hover:text-[#26a570]"
+                    >
                       <Link href="/dashboard/campaigns">
                         <BarChart3 className="h-4 w-4" />
                         <span>Campagnes</span>
@@ -89,7 +101,10 @@ export default function DashboardPage() {
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton asChild className="hover:bg-[#e6f5f0] hover:text-[#26a570]">
+                    <SidebarMenuButton
+                      asChild
+                      className="hover:bg-[#e6f5f0] hover:text-[#26a570]"
+                    >
                       <Link href="/dashboard/leads">
                         <Users className="h-4 w-4" />
                         <span>Leads</span>
@@ -97,7 +112,10 @@ export default function DashboardPage() {
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton asChild className="hover:bg-[#e6f5f0] hover:text-[#26a570]">
+                    <SidebarMenuButton
+                      asChild
+                      className="hover:bg-[#e6f5f0] hover:text-[#26a570]"
+                    >
                       <Link href="/dashboard/integrations">
                         <CreditCard className="h-4 w-4" />
                         <span>Integraties</span>
@@ -112,7 +130,10 @@ export default function DashboardPage() {
               <SidebarGroupContent>
                 <SidebarMenu>
                   <SidebarMenuItem>
-                    <SidebarMenuButton asChild className="hover:bg-[#e6f5f0] hover:text-[#26a570]">
+                    <SidebarMenuButton
+                      asChild
+                      className="hover:bg-[#e6f5f0] hover:text-[#26a570]"
+                    >
                       <Link href="/dashboard/settings">
                         <Settings className="h-4 w-4" />
                         <span>Instellingen</span>
@@ -120,7 +141,10 @@ export default function DashboardPage() {
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton asChild className="hover:bg-[#e6f5f0] hover:text-[#26a570]">
+                    <SidebarMenuButton
+                      asChild
+                      className="hover:bg-[#e6f5f0] hover:text-[#26a570]"
+                    >
                       <Link href="/dashboard/users">
                         <User className="h-4 w-4" />
                         <span>Gebruikers</span>
@@ -143,7 +167,11 @@ export default function DashboardPage() {
               </div>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="ml-auto h-8 w-8">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="ml-auto h-8 w-8"
+                  >
                     <ChevronDown className="h-4 w-4" />
                     <span className="sr-only">Menu</span>
                   </Button>
@@ -249,14 +277,26 @@ export default function DashboardPage() {
                       <div className="h-px bg-gray-200 my-2"></div>
                       <div className="flex items-center gap-3 p-3 rounded-md border border-[#e6f5f0]">
                         <Avatar className="h-10 w-10">
-                          <AvatarImage src="/placeholder-user.jpg" alt="Avatar" />
+                          <AvatarImage
+                            src="/placeholder-user.jpg"
+                            alt="Avatar"
+                          />
                           <AvatarFallback>JD</AvatarFallback>
                         </Avatar>
                         <div className="flex flex-col">
-                          <span className="text-sm font-medium">Jan Jansen</span>
-                          <span className="text-xs text-gray-500">jan@bedrijf.nl</span>
+                          <span className="text-sm font-medium">
+                            Jan Jansen
+                          </span>
+                          <span className="text-xs text-gray-500">
+                            jan@bedrijf.nl
+                          </span>
                         </div>
-                        <Button variant="ghost" size="sm" className="ml-auto" onClick={() => setIsMobileNavOpen(false)}>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="ml-auto"
+                          onClick={() => setIsMobileNavOpen(false)}
+                        >
                           <LogOut className="h-4 w-4 mr-2" />
                           Uitloggen
                         </Button>
@@ -269,7 +309,11 @@ export default function DashboardPage() {
             <div className="w-full flex-1">
               <form>
                 <div className="relative">
-                  <Input type="search" placeholder="Zoeken..." className="w-full md:w-[300px] pl-8 border-[#e6f5f0]" />
+                  <Input
+                    type="search"
+                    placeholder="Zoeken..."
+                    className="w-full md:w-[300px] pl-8 border-[#e6f5f0]"
+                  />
                   <div className="absolute left-2.5 top-2.5 text-gray-400">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -291,14 +335,24 @@ export default function DashboardPage() {
               </form>
             </div>
             <SidebarTrigger className="hidden lg:flex" />
-            <Button variant="outline" size="icon" className="relative border-[#e6f5f0]">
+            <Button
+              variant="outline"
+              size="icon"
+              className="relative border-[#e6f5f0]"
+            >
               <Bell className="h-4 w-4" />
               <span className="sr-only">Notifications</span>
-              <Badge className="absolute -right-1 -top-1 h-4 w-4 rounded-full p-0 text-[10px] bg-[#ff8a47]">3</Badge>
+              <Badge className="absolute -right-1 -top-1 h-4 w-4 rounded-full p-0 text-[10px] bg-[#ff8a47]">
+                3
+              </Badge>
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon" className="rounded-full border-[#e6f5f0]">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="rounded-full border-[#e6f5f0]"
+                >
                   <Avatar className="h-8 w-8">
                     <AvatarImage src="/placeholder-user.jpg" alt="Avatar" />
                     <AvatarFallback>JD</AvatarFallback>
@@ -326,8 +380,13 @@ export default function DashboardPage() {
           </header>
           <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
             <div className="flex items-center">
-              <h1 className="text-lg font-semibold md:text-2xl text-[#333]">Dashboard</h1>
-              <Button className="ml-auto gap-1 bg-[#ff8a47] hover:bg-[#ff7a2d] text-white border-none" size="sm">
+              <h1 className="text-lg font-semibold md:text-2xl text-[#333]">
+                Dashboard
+              </h1>
+              <Button
+                className="ml-auto gap-1 bg-[#ff8a47] hover:bg-[#ff7a2d] text-white border-none"
+                size="sm"
+              >
                 <Plus className="h-4 w-4" />
                 Nieuwe campagne
               </Button>
@@ -363,116 +422,185 @@ export default function DashboardPage() {
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                   <Card className="bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                      <CardTitle className="text-sm font-medium text-[#333]">Totaal leads</CardTitle>
+                      <CardTitle className="text-sm font-medium text-[#333]">
+                        Totaal leads
+                      </CardTitle>
                       <Users className="h-4 w-4 text-[#26a570]" />
                     </CardHeader>
                     <CardContent>
-                      <div className="text-2xl font-bold text-[#333]">1,248</div>
-                      <p className="text-xs text-gray-500">+12.5% t.o.v. vorige maand</p>
+                      <div className="text-2xl font-bold text-[#333]">
+                        1,248
+                      </div>
+                      <p className="text-xs text-gray-500">
+                        +12.5% t.o.v. vorige maand
+                      </p>
                     </CardContent>
                   </Card>
                   <Card className="bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                      <CardTitle className="text-sm font-medium text-[#333]">Conversie</CardTitle>
+                      <CardTitle className="text-sm font-medium text-[#333]">
+                        Conversie
+                      </CardTitle>
                       <BarChart3 className="h-4 w-4 text-[#ff8a47]" />
                     </CardHeader>
                     <CardContent>
-                      <div className="text-2xl font-bold text-[#333]">24.3%</div>
-                      <p className="text-xs text-gray-500">+2.1% t.o.v. vorige maand</p>
+                      <div className="text-2xl font-bold text-[#333]">
+                        24.3%
+                      </div>
+                      <p className="text-xs text-gray-500">
+                        +2.1% t.o.v. vorige maand
+                      </p>
                     </CardContent>
                   </Card>
                   <Card className="bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                      <CardTitle className="text-sm font-medium text-[#333]">Actieve campagnes</CardTitle>
+                      <CardTitle className="text-sm font-medium text-[#333]">
+                        Actieve campagnes
+                      </CardTitle>
                       <FileText className="h-4 w-4 text-[#26a570]" />
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold text-[#333]">12</div>
-                      <p className="text-xs text-gray-500">+2 t.o.v. vorige maand</p>
+                      <p className="text-xs text-gray-500">
+                        +2 t.o.v. vorige maand
+                      </p>
                     </CardContent>
                   </Card>
                   <Card className="bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                      <CardTitle className="text-sm font-medium text-[#333]">Openstaande taken</CardTitle>
+                      <CardTitle className="text-sm font-medium text-[#333]">
+                        Openstaande taken
+                      </CardTitle>
                       <MessageSquare className="h-4 w-4 text-[#ff8a47]" />
                     </CardHeader>
                     <CardContent>
                       <div className="text-2xl font-bold text-[#333]">8</div>
-                      <p className="text-xs text-gray-500">-3 t.o.v. vorige week</p>
+                      <p className="text-xs text-gray-500">
+                        -3 t.o.v. vorige week
+                      </p>
                     </CardContent>
                   </Card>
                 </div>
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                   <Card className="col-span-4 bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                     <CardHeader>
-                      <CardTitle className="text-[#333]">Recente leads</CardTitle>
-                      <CardDescription>Overzicht van de meest recente leads</CardDescription>
+                      <CardTitle className="text-[#333]">
+                        Recente leads
+                      </CardTitle>
+                      <CardDescription>
+                        Overzicht van de meest recente leads
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-8">
                         <div className="flex items-center">
                           <Avatar className="h-9 w-9">
-                            <AvatarImage src="/placeholder-user.jpg" alt="Avatar" />
+                            <AvatarImage
+                              src="/placeholder-user.jpg"
+                              alt="Avatar"
+                            />
                             <AvatarFallback>PK</AvatarFallback>
                           </Avatar>
                           <div className="ml-4 space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Piet Klaassen</p>
-                            <p className="text-sm text-gray-500">piet@example.com</p>
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Piet Klaassen
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              piet@example.com
+                            </p>
                           </div>
                           <div className="ml-auto font-medium">
-                            <Badge className="bg-[#26a570] hover:bg-[#1e8f5e] text-white">Energie Campagne</Badge>
+                            <Badge className="bg-[#26a570] hover:bg-[#1e8f5e] text-white">
+                              Energie Campagne
+                            </Badge>
                           </div>
                         </div>
                         <div className="flex items-center">
                           <Avatar className="h-9 w-9">
-                            <AvatarImage src="/placeholder-user.jpg" alt="Avatar" />
+                            <AvatarImage
+                              src="/placeholder-user.jpg"
+                              alt="Avatar"
+                            />
                             <AvatarFallback>MV</AvatarFallback>
                           </Avatar>
                           <div className="ml-4 space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Maria Visser</p>
-                            <p className="text-sm text-gray-500">maria@example.com</p>
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Maria Visser
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              maria@example.com
+                            </p>
                           </div>
                           <div className="ml-auto font-medium">
-                            <Badge className="bg-[#26a570] hover:bg-[#1e8f5e] text-white">Energie Campagne</Badge>
+                            <Badge className="bg-[#26a570] hover:bg-[#1e8f5e] text-white">
+                              Energie Campagne
+                            </Badge>
                           </div>
                         </div>
                         <div className="flex items-center">
                           <Avatar className="h-9 w-9">
-                            <AvatarImage src="/placeholder-user.jpg" alt="Avatar" />
+                            <AvatarImage
+                              src="/placeholder-user.jpg"
+                              alt="Avatar"
+                            />
                             <AvatarFallback>JB</AvatarFallback>
                           </Avatar>
                           <div className="ml-4 space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Johan Bakker</p>
-                            <p className="text-sm text-gray-500">johan@example.com</p>
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Johan Bakker
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              johan@example.com
+                            </p>
                           </div>
                           <div className="ml-auto font-medium">
-                            <Badge className="bg-[#ff8a47] hover:bg-[#ff7a2d] text-white">Internet Campagne</Badge>
+                            <Badge className="bg-[#ff8a47] hover:bg-[#ff7a2d] text-white">
+                              Internet Campagne
+                            </Badge>
                           </div>
                         </div>
                         <div className="flex items-center">
                           <Avatar className="h-9 w-9">
-                            <AvatarImage src="/placeholder-user.jpg" alt="Avatar" />
+                            <AvatarImage
+                              src="/placeholder-user.jpg"
+                              alt="Avatar"
+                            />
                             <AvatarFallback>SD</AvatarFallback>
                           </Avatar>
                           <div className="ml-4 space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Sandra de Vries</p>
-                            <p className="text-sm text-gray-500">sandra@example.com</p>
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Sandra de Vries
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              sandra@example.com
+                            </p>
                           </div>
                           <div className="ml-auto font-medium">
-                            <Badge className="bg-[#ff8a47] hover:bg-[#ff7a2d] text-white">Internet Campagne</Badge>
+                            <Badge className="bg-[#ff8a47] hover:bg-[#ff7a2d] text-white">
+                              Internet Campagne
+                            </Badge>
                           </div>
                         </div>
                         <div className="flex items-center">
                           <Avatar className="h-9 w-9">
-                            <AvatarImage src="/placeholder-user.jpg" alt="Avatar" />
+                            <AvatarImage
+                              src="/placeholder-user.jpg"
+                              alt="Avatar"
+                            />
                             <AvatarFallback>KM</AvatarFallback>
                           </Avatar>
                           <div className="ml-4 space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Karel Meijer</p>
-                            <p className="text-sm text-gray-500">karel@example.com</p>
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Karel Meijer
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              karel@example.com
+                            </p>
                           </div>
                           <div className="ml-auto font-medium">
-                            <Badge className="bg-[#26a570] hover:bg-[#1e8f5e] text-white">Energie Campagne</Badge>
+                            <Badge className="bg-[#26a570] hover:bg-[#1e8f5e] text-white">
+                              Energie Campagne
+                            </Badge>
                           </div>
                         </div>
                       </div>
@@ -480,47 +608,80 @@ export default function DashboardPage() {
                   </Card>
                   <Card className="col-span-3 bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                     <CardHeader>
-                      <CardTitle className="text-[#333]">Recente activiteiten</CardTitle>
-                      <CardDescription>De laatste activiteiten in het systeem</CardDescription>
+                      <CardTitle className="text-[#333]">
+                        Recente activiteiten
+                      </CardTitle>
+                      <CardDescription>
+                        De laatste activiteiten in het systeem
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-8">
                         <div className="flex items-center">
                           <div className="space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Nieuwe lead toegevoegd</p>
-                            <p className="text-sm text-gray-500">Piet Klaassen is toegevoegd aan Energie Campagne</p>
-                          </div>
-                          <div className="ml-auto text-sm text-gray-500">5m geleden</div>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Handtekening ontvangen</p>
-                            <p className="text-sm text-gray-500">Maria Visser heeft het contract ondertekend</p>
-                          </div>
-                          <div className="ml-auto text-sm text-gray-500">15m geleden</div>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">Nieuwe campagne gestart</p>
-                            <p className="text-sm text-gray-500">Internet Campagne is geactiveerd</p>
-                          </div>
-                          <div className="ml-auto text-sm text-gray-500">3u geleden</div>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">API-sleutel toegevoegd</p>
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Nieuwe lead toegevoegd
+                            </p>
                             <p className="text-sm text-gray-500">
-                              Nieuwe Salesdock API-sleutel voor Energie Leverancier B.V.
+                              Piet Klaassen is toegevoegd aan Energie Campagne
                             </p>
                           </div>
-                          <div className="ml-auto text-sm text-gray-500">5u geleden</div>
+                          <div className="ml-auto text-sm text-gray-500">
+                            5m geleden
+                          </div>
                         </div>
                         <div className="flex items-center">
                           <div className="space-y-1">
-                            <p className="text-sm font-medium leading-none text-[#333]">E-mail verzonden</p>
-                            <p className="text-sm text-gray-500">Herinneringsmail verzonden naar 24 klanten</p>
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Handtekening ontvangen
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              Maria Visser heeft het contract ondertekend
+                            </p>
                           </div>
-                          <div className="ml-auto text-sm text-gray-500">1d geleden</div>
+                          <div className="ml-auto text-sm text-gray-500">
+                            15m geleden
+                          </div>
+                        </div>
+                        <div className="flex items-center">
+                          <div className="space-y-1">
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              Nieuwe campagne gestart
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              Internet Campagne is geactiveerd
+                            </p>
+                          </div>
+                          <div className="ml-auto text-sm text-gray-500">
+                            3u geleden
+                          </div>
+                        </div>
+                        <div className="flex items-center">
+                          <div className="space-y-1">
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              API-sleutel toegevoegd
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              Nieuwe Salesdock API-sleutel voor Energie
+                              Leverancier B.V.
+                            </p>
+                          </div>
+                          <div className="ml-auto text-sm text-gray-500">
+                            5u geleden
+                          </div>
+                        </div>
+                        <div className="flex items-center">
+                          <div className="space-y-1">
+                            <p className="text-sm font-medium leading-none text-[#333]">
+                              E-mail verzonden
+                            </p>
+                            <p className="text-sm text-gray-500">
+                              Herinneringsmail verzonden naar 24 klanten
+                            </p>
+                          </div>
+                          <div className="ml-auto text-sm text-gray-500">
+                            1d geleden
+                          </div>
                         </div>
                       </div>
                     </CardContent>
@@ -531,10 +692,14 @@ export default function DashboardPage() {
                 <Card className="bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                   <CardHeader>
                     <CardTitle className="text-[#333]">Statistieken</CardTitle>
-                    <CardDescription>Gedetailleerde statistieken van uw campagnes</CardDescription>
+                    <CardDescription>
+                      Gedetailleerde statistieken van uw campagnes
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="h-[400px] flex items-center justify-center">
-                    <p className="text-gray-500">Statistieken worden hier weergegeven</p>
+                    <p className="text-gray-500">
+                      Statistieken worden hier weergegeven
+                    </p>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -542,10 +707,14 @@ export default function DashboardPage() {
                 <Card className="bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                   <CardHeader>
                     <CardTitle className="text-[#333]">Rapporten</CardTitle>
-                    <CardDescription>Bekijk en download rapporten</CardDescription>
+                    <CardDescription>
+                      Bekijk en download rapporten
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="h-[400px] flex items-center justify-center">
-                    <p className="text-gray-500">Rapporten worden hier weergegeven</p>
+                    <p className="text-gray-500">
+                      Rapporten worden hier weergegeven
+                    </p>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -553,10 +722,14 @@ export default function DashboardPage() {
                 <Card className="bg-white border border-[#e6f5f0] hover:shadow-md transition-all">
                   <CardHeader>
                     <CardTitle className="text-[#333]">Notificaties</CardTitle>
-                    <CardDescription>Beheer uw notificatie-instellingen</CardHeader>
+                    <CardDescription>
+                      Beheer uw notificatie-instellingen
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="h-[400px] flex items-center justify-center">
-                    <p className="text-gray-500">Notificatie-instellingen worden hier weergegeven</p>
+                    <p className="text-gray-500">
+                      Notificatie-instellingen worden hier weergegeven
+                    </p>
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -565,5 +738,5 @@ export default function DashboardPage() {
         </div>
       </div>
     </SidebarProvider>
-  )
+  );
 }
