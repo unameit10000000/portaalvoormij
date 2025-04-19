@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portaalvoormij.nl",
+  title: "portaalvoormij.nl",
   description: "Verbind klanten, verkopers en leveranciers op één platform",
 };
 
